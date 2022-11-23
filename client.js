@@ -14,10 +14,14 @@ const connect = () => {
 	});
 	conn.on('connect', () => {
 		conn.write('Name: Lrs');
-	})
+	});
+	// conn.on('connect', () => {
+	// 	conn.write('Move: up');
+	// });
 	conn.on('data', (data) => {
 		console.log(data.toString());
 	});
+
 	return conn;
 };
 module.exports = connect;
